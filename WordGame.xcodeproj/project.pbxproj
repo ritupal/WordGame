@@ -7,14 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A037C0F72890176A00A6A1F8 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A037C0F62890176A00A6A1F8 /* HomeInteractor.swift */; };
 		A0DD9E0E288F05780021E9FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DD9E0D288F05780021E9FA /* AppDelegate.swift */; };
 		A0DD9E10288F05780021E9FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DD9E0F288F05780021E9FA /* SceneDelegate.swift */; };
-		A0DD9E12288F05780021E9FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DD9E11288F05780021E9FA /* ViewController.swift */; };
 		A0DD9E15288F05780021E9FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0DD9E13288F05780021E9FA /* Main.storyboard */; };
 		A0DD9E17288F057A0021E9FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0DD9E16288F057A0021E9FA /* Assets.xcassets */; };
 		A0DD9E1A288F057A0021E9FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0DD9E18288F057A0021E9FA /* LaunchScreen.storyboard */; };
 		A0DD9E25288F057A0021E9FA /* WordGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DD9E24288F057A0021E9FA /* WordGameTests.swift */; };
 		A0DD9E30288F057A0021E9FA /* WordGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DD9E2F288F057A0021E9FA /* WordGameUITests.swift */; };
+		A0DD9E3F288F05B60021E9FA /* words.json in Resources */ = {isa = PBXBuildFile; fileRef = A0DD9E3E288F05B60021E9FA /* words.json */; };
+		A0DD9E47288F0BB00021E9FA /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DD9E46288F0BB00021E9FA /* Constant.swift */; };
+		A0DD9E4A288F0EC80021E9FA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A0DD9E4C288F0EC80021E9FA /* Localizable.strings */; };
+		A0DD9E58288F10A80021E9FA /* String+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DD9E57288F10A80021E9FA /* String+Localizable.swift */; };
+		A0DD9E5B288F11AE0021E9FA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DD9E5A288F11AE0021E9FA /* HomeViewController.swift */; };
+		A0DD9E5F288F19020021E9FA /* CustomMainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DD9E5E288F19020021E9FA /* CustomMainButton.swift */; };
+		A0DD9E61288F1CB30021E9FA /* UIButton+Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DD9E60288F1CB30021E9FA /* UIButton+Main.swift */; };
+		A0DD9E64289007370021E9FA /* Bundle+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DD9E63289007370021E9FA /* Bundle+Decodable.swift */; };
+		A0DD9E6728900A520021E9FA /* WordsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DD9E6628900A520021E9FA /* WordsModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,10 +44,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A037C0F62890176A00A6A1F8 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		A0DD9E0A288F05780021E9FA /* WordGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0DD9E0D288F05780021E9FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0DD9E0F288F05780021E9FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A0DD9E11288F05780021E9FA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A0DD9E14288F05780021E9FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A0DD9E16288F057A0021E9FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A0DD9E19288F057A0021E9FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +58,18 @@
 		A0DD9E2B288F057A0021E9FA /* WordGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WordGameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0DD9E2F288F057A0021E9FA /* WordGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordGameUITests.swift; sourceTree = "<group>"; };
 		A0DD9E31288F057A0021E9FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0DD9E3E288F05B60021E9FA /* words.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = words.json; sourceTree = "<group>"; };
+		A0DD9E46288F0BB00021E9FA /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		A0DD9E4B288F0EC80021E9FA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A0DD9E54288F0F9D0021E9FA /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
+		A0DD9E55288F0F9D0021E9FA /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		A0DD9E56288F0F9D0021E9FA /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A0DD9E57288F10A80021E9FA /* String+Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localizable.swift"; sourceTree = "<group>"; };
+		A0DD9E5A288F11AE0021E9FA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		A0DD9E5E288F19020021E9FA /* CustomMainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMainButton.swift; sourceTree = "<group>"; };
+		A0DD9E60288F1CB30021E9FA /* UIButton+Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Main.swift"; sourceTree = "<group>"; };
+		A0DD9E63289007370021E9FA /* Bundle+Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Decodable.swift"; sourceTree = "<group>"; };
+		A0DD9E6628900A520021E9FA /* WordsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,11 +120,14 @@
 		A0DD9E0C288F05780021E9FA /* WordGame */ = {
 			isa = PBXGroup;
 			children = (
-				A0DD9E0D288F05780021E9FA /* AppDelegate.swift */,
-				A0DD9E0F288F05780021E9FA /* SceneDelegate.swift */,
-				A0DD9E11288F05780021E9FA /* ViewController.swift */,
+				A0DD9E62288FFCF30021E9FA /* API */,
+				A0DD9E5C288F18D50021E9FA /* Components */,
+				A0DD9E45288F0B930021E9FA /* Constant */,
+				A0DD9E42288F07C10021E9FA /* Scenes */,
+				A0DD9E41288F07470021E9FA /* Extension */,
+				A0DD9E40288F06C40021E9FA /* App */,
+				A0DD9E3D288F059B0021E9FA /* Resources */,
 				A0DD9E13288F05780021E9FA /* Main.storyboard */,
-				A0DD9E16288F057A0021E9FA /* Assets.xcassets */,
 				A0DD9E18288F057A0021E9FA /* LaunchScreen.storyboard */,
 				A0DD9E1B288F057A0021E9FA /* Info.plist */,
 			);
@@ -126,6 +150,92 @@
 				A0DD9E31288F057A0021E9FA /* Info.plist */,
 			);
 			path = WordGameUITests;
+			sourceTree = "<group>";
+		};
+		A0DD9E3D288F059B0021E9FA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A0DD9E16288F057A0021E9FA /* Assets.xcassets */,
+				A0DD9E3E288F05B60021E9FA /* words.json */,
+				A0DD9E4C288F0EC80021E9FA /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A0DD9E40288F06C40021E9FA /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A0DD9E0D288F05780021E9FA /* AppDelegate.swift */,
+				A0DD9E0F288F05780021E9FA /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		A0DD9E41288F07470021E9FA /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A0DD9E57288F10A80021E9FA /* String+Localizable.swift */,
+				A0DD9E60288F1CB30021E9FA /* UIButton+Main.swift */,
+				A0DD9E63289007370021E9FA /* Bundle+Decodable.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		A0DD9E42288F07C10021E9FA /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				A0DD9E59288F119B0021E9FA /* Home */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		A0DD9E45288F0B930021E9FA /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				A0DD9E46288F0BB00021E9FA /* Constant.swift */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		A0DD9E59288F119B0021E9FA /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A0DD9E5A288F11AE0021E9FA /* HomeViewController.swift */,
+				A037C0F62890176A00A6A1F8 /* HomeInteractor.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		A0DD9E5C288F18D50021E9FA /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				A0DD9E5D288F18DF0021E9FA /* UI */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		A0DD9E5D288F18DF0021E9FA /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				A0DD9E5E288F19020021E9FA /* CustomMainButton.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		A0DD9E62288FFCF30021E9FA /* API */ = {
+			isa = PBXGroup;
+			children = (
+				A0DD9E6528900A460021E9FA /* ResponseModels */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		A0DD9E6528900A460021E9FA /* ResponseModels */ = {
+			isa = PBXGroup;
+			children = (
+				A0DD9E6628900A520021E9FA /* WordsModel.swift */,
+			);
+			path = ResponseModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,6 +323,7 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
 			);
 			mainGroup = A0DD9E01288F05770021E9FA;
 			productRefGroup = A0DD9E0B288F05780021E9FA /* Products */;
@@ -231,7 +342,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0DD9E4A288F0EC80021E9FA /* Localizable.strings in Resources */,
 				A0DD9E1A288F057A0021E9FA /* LaunchScreen.storyboard in Resources */,
+				A0DD9E3F288F05B60021E9FA /* words.json in Resources */,
 				A0DD9E17288F057A0021E9FA /* Assets.xcassets in Resources */,
 				A0DD9E15288F05780021E9FA /* Main.storyboard in Resources */,
 			);
@@ -258,9 +371,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0DD9E12288F05780021E9FA /* ViewController.swift in Sources */,
+				A0DD9E5B288F11AE0021E9FA /* HomeViewController.swift in Sources */,
+				A0DD9E6728900A520021E9FA /* WordsModel.swift in Sources */,
+				A0DD9E64289007370021E9FA /* Bundle+Decodable.swift in Sources */,
+				A037C0F72890176A00A6A1F8 /* HomeInteractor.swift in Sources */,
 				A0DD9E0E288F05780021E9FA /* AppDelegate.swift in Sources */,
 				A0DD9E10288F05780021E9FA /* SceneDelegate.swift in Sources */,
+				A0DD9E47288F0BB00021E9FA /* Constant.swift in Sources */,
+				A0DD9E61288F1CB30021E9FA /* UIButton+Main.swift in Sources */,
+				A0DD9E58288F10A80021E9FA /* String+Localizable.swift in Sources */,
+				A0DD9E5F288F19020021E9FA /* CustomMainButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +420,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				A0DD9E14288F05780021E9FA /* Base */,
+				A0DD9E54288F0F9D0021E9FA /* de */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -308,8 +429,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				A0DD9E19288F057A0021E9FA /* Base */,
+				A0DD9E55288F0F9D0021E9FA /* de */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		A0DD9E4C288F0EC80021E9FA /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A0DD9E4B288F0EC80021E9FA /* en */,
+				A0DD9E56288F0F9D0021E9FA /* de */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -319,6 +450,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -380,6 +512,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
