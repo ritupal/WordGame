@@ -7,7 +7,12 @@
 
 import UIKit
 
+protocol HomeDisplayLogic: AnyObject {
+    func loadLanguageWord(_ word: WordsModel)
+}
+
 class HomeViewController: UIViewController {
+    var interactor: HomeBuisnessLogic?
     
     //MARK:- IBOutlets
     @IBOutlet weak var lblCorrectAttempts: UILabel!
@@ -20,22 +25,42 @@ class HomeViewController: UIViewController {
     //MARK:- View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.defaultSetup()
         self.setupView()
+        self.getLanguageWord()
     }
     
     //MARK:- Methods
-    func setupView() {
+    private func defaultSetup() {
+        let viewController = self
+        let interactor = HomeInteractor()
+        let presenter = HomePresenter()
+        viewController.interactor = interactor
+        interactor.presenter = presenter
+        presenter.viewController = viewController
+    }
+    
+    private func setupView() {
         setDefaultText()
         self.lblCorrectAttempts.textColor = Constants.Style.mainColor
         self.lblWrongAttempts.textColor = Constants.Style.mainColor
         self.BtnWrong.backgroundColor = Constants.Style.mainColor
     }
     
-    func setDefaultText() {
+    private func setDefaultText() {
         self.lblCorrectAttempts.text = Constants.HomeScreen.correctAttempts
         self.lblWrongAttempts.text = Constants.HomeScreen.wrongAttempts
         self.BtnCorrect.setTitle(Constants.HomeScreen.correct, for: .normal)
         self.BtnWrong.setTitle(Constants.HomeScreen.wrong, for: .normal)
+    }
+    
+    private func setLanguageWords(word: WordsModel) {
+        self.lblEnglishWord.text = word.engText
+        self.lblSpanishWord.text = word.spanishText
+    }
+    
+    private func getLanguageWord() {
+        interactor?.fetchWords()
     }
     
     //MARK:- IBActions
@@ -45,4 +70,10 @@ class HomeViewController: UIViewController {
     @IBAction func actionWrongAction(_ sender: Any) {
     }
     
+}
+
+extension HomeViewController: HomeDisplayLogic {
+    func loadLanguageWord(_ word: WordsModel) {
+        self.setLanguageWords(word: word)
+    }
 }

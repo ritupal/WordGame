@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		A037C0F72890176A00A6A1F8 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A037C0F62890176A00A6A1F8 /* HomeInteractor.swift */; };
+		A037C0F9289023B200A6A1F8 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A037C0F8289023B200A6A1F8 /* HomePresenter.swift */; };
+		A07F9FB428902D09000C3100 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A07F9FB628902D09000C3100 /* Localizable.strings */; };
 		A0DD9E0E288F05780021E9FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DD9E0D288F05780021E9FA /* AppDelegate.swift */; };
 		A0DD9E10288F05780021E9FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DD9E0F288F05780021E9FA /* SceneDelegate.swift */; };
 		A0DD9E15288F05780021E9FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0DD9E13288F05780021E9FA /* Main.storyboard */; };
@@ -17,7 +19,6 @@
 		A0DD9E30288F057A0021E9FA /* WordGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DD9E2F288F057A0021E9FA /* WordGameUITests.swift */; };
 		A0DD9E3F288F05B60021E9FA /* words.json in Resources */ = {isa = PBXBuildFile; fileRef = A0DD9E3E288F05B60021E9FA /* words.json */; };
 		A0DD9E47288F0BB00021E9FA /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DD9E46288F0BB00021E9FA /* Constant.swift */; };
-		A0DD9E4A288F0EC80021E9FA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A0DD9E4C288F0EC80021E9FA /* Localizable.strings */; };
 		A0DD9E58288F10A80021E9FA /* String+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DD9E57288F10A80021E9FA /* String+Localizable.swift */; };
 		A0DD9E5B288F11AE0021E9FA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DD9E5A288F11AE0021E9FA /* HomeViewController.swift */; };
 		A0DD9E5F288F19020021E9FA /* CustomMainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DD9E5E288F19020021E9FA /* CustomMainButton.swift */; };
@@ -45,6 +46,9 @@
 
 /* Begin PBXFileReference section */
 		A037C0F62890176A00A6A1F8 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		A037C0F8289023B200A6A1F8 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		A07F9FB528902D09000C3100 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A07F9FB828902D2B000C3100 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		A0DD9E0A288F05780021E9FA /* WordGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0DD9E0D288F05780021E9FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0DD9E0F288F05780021E9FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,10 +64,6 @@
 		A0DD9E31288F057A0021E9FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A0DD9E3E288F05B60021E9FA /* words.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = words.json; sourceTree = "<group>"; };
 		A0DD9E46288F0BB00021E9FA /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
-		A0DD9E4B288F0EC80021E9FA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		A0DD9E54288F0F9D0021E9FA /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
-		A0DD9E55288F0F9D0021E9FA /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		A0DD9E56288F0F9D0021E9FA /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A0DD9E57288F10A80021E9FA /* String+Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localizable.swift"; sourceTree = "<group>"; };
 		A0DD9E5A288F11AE0021E9FA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A0DD9E5E288F19020021E9FA /* CustomMainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMainButton.swift; sourceTree = "<group>"; };
@@ -157,7 +157,7 @@
 			children = (
 				A0DD9E16288F057A0021E9FA /* Assets.xcassets */,
 				A0DD9E3E288F05B60021E9FA /* words.json */,
-				A0DD9E4C288F0EC80021E9FA /* Localizable.strings */,
+				A07F9FB628902D09000C3100 /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -202,6 +202,7 @@
 			children = (
 				A0DD9E5A288F11AE0021E9FA /* HomeViewController.swift */,
 				A037C0F62890176A00A6A1F8 /* HomeInteractor.swift */,
+				A037C0F8289023B200A6A1F8 /* HomePresenter.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -342,7 +343,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0DD9E4A288F0EC80021E9FA /* Localizable.strings in Resources */,
+				A07F9FB428902D09000C3100 /* Localizable.strings in Resources */,
 				A0DD9E1A288F057A0021E9FA /* LaunchScreen.storyboard in Resources */,
 				A0DD9E3F288F05B60021E9FA /* words.json in Resources */,
 				A0DD9E17288F057A0021E9FA /* Assets.xcassets in Resources */,
@@ -381,6 +382,7 @@
 				A0DD9E61288F1CB30021E9FA /* UIButton+Main.swift in Sources */,
 				A0DD9E58288F10A80021E9FA /* String+Localizable.swift in Sources */,
 				A0DD9E5F288F19020021E9FA /* CustomMainButton.swift in Sources */,
+				A037C0F9289023B200A6A1F8 /* HomePresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,11 +418,19 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		A07F9FB628902D09000C3100 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A07F9FB528902D09000C3100 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		A0DD9E13288F05780021E9FA /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				A0DD9E14288F05780021E9FA /* Base */,
-				A0DD9E54288F0F9D0021E9FA /* de */,
+				A07F9FB828902D2B000C3100 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -429,18 +439,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				A0DD9E19288F057A0021E9FA /* Base */,
-				A0DD9E55288F0F9D0021E9FA /* de */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		A0DD9E4C288F0EC80021E9FA /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A0DD9E4B288F0EC80021E9FA /* en */,
-				A0DD9E56288F0F9D0021E9FA /* de */,
-			);
-			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
