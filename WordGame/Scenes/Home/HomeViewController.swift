@@ -8,18 +8,19 @@
 import UIKit
 
 protocol HomeDisplayLogic: AnyObject {
-    func loadLanguageWord(_ word: WordsModel)
+    func loadLanguageWord(_ viewModel: HomeViewModel)
 }
 
 class HomeViewController: UIViewController {
     var interactor: HomeBuisnessLogic?
+    var viewModel: HomeViewModel?
     
     //MARK:- IBOutlets
     @IBOutlet weak var lblCorrectAttempts: UILabel!
     @IBOutlet weak var lblWrongAttempts: UILabel!
     @IBOutlet weak var lblSpanishWord: UILabel!
     @IBOutlet weak var lblEnglishWord: UILabel!
-    @IBOutlet weak var BtnCorrect: CustomMainButton!
+    @IBOutlet weak var BtnCorrect: UIButton!
     @IBOutlet weak var BtnWrong: UIButton!
     
     //MARK:- View Life Cycle
@@ -54,9 +55,11 @@ class HomeViewController: UIViewController {
         self.BtnWrong.setTitle(Constants.HomeScreen.wrong, for: .normal)
     }
     
-    private func setLanguageWords(word: WordsModel) {
-        self.lblEnglishWord.text = word.engText
-        self.lblSpanishWord.text = word.spanishText
+    private func setLanguageWords(vm: HomeInfoViewModel) {
+        self.lblEnglishWord.text = vm.engText
+        self.lblSpanishWord.text = vm.spanishText
+        self.lblCorrectAttempts.text = Constants.HomeScreen.correctAttempts + "\(vm.correctAttempts)"
+        self.lblWrongAttempts.text = Constants.HomeScreen.wrongAttempts + "\(vm.wrongAttempts)"
     }
     
     private func getLanguageWord() {
@@ -65,15 +68,18 @@ class HomeViewController: UIViewController {
     
     //MARK:- IBActions
     @IBAction func actionCorrectAnswer(_ sender: Any) {
+        interactor?.checkTransaltion(self.viewModel, isCorrect: true)
     }
     
     @IBAction func actionWrongAction(_ sender: Any) {
+        interactor?.checkTransaltion(self.viewModel, isCorrect: false)
     }
     
 }
 
 extension HomeViewController: HomeDisplayLogic {
-    func loadLanguageWord(_ word: WordsModel) {
-        self.setLanguageWords(word: word)
+    func loadLanguageWord(_ viewModel: HomeViewModel) {
+        self.viewModel = viewModel
+        self.setLanguageWords(vm: viewModel.homeInfoVM)
     }
 }

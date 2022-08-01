@@ -9,7 +9,7 @@ import Foundation
 
 struct WordsModel: Codable {
     let engText: String
-    let spanishText: String
+    var spanishText: String
     
     private enum CodingKeys: String, CodingKey {
         case engText = "text_eng"

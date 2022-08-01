@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 struct Constants {
+    static let maxWordPairForAGame = 15
     struct HomeScreen {
         static let correctAttempts = "home_correct_attemps".localized()
         static let wrongAttempts = "home_wrong_attemps".localized()
