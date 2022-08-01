@@ -10,6 +10,9 @@ import UIKit
 
 struct Constants {
     static let maxWordPairForAGame = 15
+    static let maxWrongLimit = 3
+    static let maxTimeForAttempt = 5
+    
     struct HomeScreen {
         static let correctAttempts = "home_correct_attemps".localized()
         static let wrongAttempts = "home_wrong_attemps".localized()

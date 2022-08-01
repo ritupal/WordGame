@@ -60,18 +60,28 @@ class HomeViewController: UIViewController {
         self.lblSpanishWord.text = vm.spanishText
         self.lblCorrectAttempts.text = Constants.HomeScreen.correctAttempts + "\(vm.correctAttempts)"
         self.lblWrongAttempts.text = Constants.HomeScreen.wrongAttempts + "\(vm.wrongAttempts)"
+        self.endGame(vm: vm)
     }
     
     private func getLanguageWord() {
         interactor?.fetchWords()
+        interactor?.startTimer()
+    }
+    
+    private func endGame(vm: HomeInfoViewModel) {
+        if vm.correctAttempts == Constants.maxWordPairForAGame || vm.wrongAttempts == Constants.maxWrongLimit {
+            exit(0)
+        }
     }
     
     //MARK:- IBActions
     @IBAction func actionCorrectAnswer(_ sender: Any) {
+        interactor?.resetTimer()
         interactor?.checkTransaltion(self.viewModel, isCorrect: true)
     }
     
     @IBAction func actionWrongAction(_ sender: Any) {
+        interactor?.resetTimer()
         interactor?.checkTransaltion(self.viewModel, isCorrect: false)
     }
     

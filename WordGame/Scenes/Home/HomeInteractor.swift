@@ -10,6 +10,8 @@ import Foundation
 protocol HomeBuisnessLogic {
     func fetchWords()
     func checkTransaltion(_ vm: HomeViewModel?, isCorrect: Bool)
+    func startTimer()
+    func resetTimer()
 }
 
 protocol HomeDataStore {
@@ -24,6 +26,7 @@ class HomeInteractor: HomeDataStore {
     var wordsForGame: [WordsModel] = []
     var correctAttempts = 0
     var wrongAttempts = 0
+    var timer = Timer()
     
     //MARK: Private functions
     private func isWordListEmpty() -> Bool {
@@ -57,6 +60,13 @@ class HomeInteractor: HomeDataStore {
         }
     }
     
+    func increaseWrongAttempt() {
+        self.wrongAttempts += 1
+        let randomWord = self.getRandomWord(self.wordsForGame)
+        self.presenter?.loadTranslationPair(word: randomWord, correctAttempts: self.correctAttempts, wrongAttempts: self.wrongAttempts)
+    }
+    
+    
 }
 
 extension HomeInteractor: HomeBuisnessLogic {
@@ -68,6 +78,7 @@ extension HomeInteractor: HomeBuisnessLogic {
     }
     
     func checkTransaltion(_ vm: HomeViewModel?, isCorrect: Bool)  {
+        self.resetTimer()
         guard !isWordListEmpty(), let vm = vm else { return }
         let filteredVM = self.allWords.filter ({
             return $0.engText == vm.homeInfoVM.engText && $0.spanishText == vm.homeInfoVM.spanishText
@@ -81,6 +92,22 @@ extension HomeInteractor: HomeBuisnessLogic {
             self.wrongAttempts += 1
         }
         self.presenter?.loadTranslationPair(word: randomWord, correctAttempts: self.correctAttempts, wrongAttempts: self.wrongAttempts)
+    }
+    
+    func startTimer() {
+        var timeLeft = 5
+        self.timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { timer in
+            timeLeft -= 1
+            if timeLeft == 0 {
+                self.increaseWrongAttempt()
+                timer.invalidate()
+            }
+        })
+    }
+    
+    func resetTimer() {
+        timer.invalidate()
+        startTimer()
     }
     
 }
