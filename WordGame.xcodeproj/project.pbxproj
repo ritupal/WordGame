@@ -11,6 +11,7 @@
 		A037C0F9289023B200A6A1F8 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A037C0F8289023B200A6A1F8 /* HomePresenter.swift */; };
 		A07F9FB428902D09000C3100 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A07F9FB628902D09000C3100 /* Localizable.strings */; };
 		A07F9FBA28918D53000C3100 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07F9FB928918D53000C3100 /* HomeViewModel.swift */; };
+		A0B41BEA2898180A00E6CE39 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B41BE92898180A00E6CE39 /* BaseViewController.swift */; };
 		A0DD9E0E288F05780021E9FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DD9E0D288F05780021E9FA /* AppDelegate.swift */; };
 		A0DD9E10288F05780021E9FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DD9E0F288F05780021E9FA /* SceneDelegate.swift */; };
 		A0DD9E15288F05780021E9FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0DD9E13288F05780021E9FA /* Main.storyboard */; };
@@ -50,6 +51,7 @@
 		A07F9FB528902D09000C3100 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A07F9FB828902D2B000C3100 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		A07F9FB928918D53000C3100 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		A0B41BE92898180A00E6CE39 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		A0DD9E0A288F05780021E9FA /* WordGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0DD9E0D288F05780021E9FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0DD9E0F288F05780021E9FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 		A0DD9E5D288F18DF0021E9FA /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				A0B41BE92898180A00E6CE39 /* BaseViewController.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -377,6 +380,7 @@
 				A0DD9E64289007370021E9FA /* Bundle+Decodable.swift in Sources */,
 				A037C0F72890176A00A6A1F8 /* HomeInteractor.swift in Sources */,
 				A0DD9E0E288F05780021E9FA /* AppDelegate.swift in Sources */,
+				A0B41BEA2898180A00E6CE39 /* BaseViewController.swift in Sources */,
 				A0DD9E10288F05780021E9FA /* SceneDelegate.swift in Sources */,
 				A0DD9E47288F0BB00021E9FA /* Constant.swift in Sources */,
 				A07F9FBA28918D53000C3100 /* HomeViewModel.swift in Sources */,

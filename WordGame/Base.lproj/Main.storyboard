@@ -109,8 +109,8 @@
                         <outlet property="BtnCorrect" destination="eeN-0G-BN1" id="GEs-Zm-BZa"/>
                         <outlet property="BtnWrong" destination="fnB-4b-Ece" id="QFW-bP-tx9"/>
                         <outlet property="lblCorrectAttempts" destination="W0t-Mm-Oua" id="j73-bD-KZV"/>
-                        <outlet property="lblEnglishWord" destination="GEF-BX-she" id="iIV-NF-Ahd"/>
-                        <outlet property="lblSpanishWord" destination="fGn-Um-QRc" id="NfJ-SS-7vg"/>
+                        <outlet property="lblEnglishWord" destination="fGn-Um-QRc" id="vIa-RY-bD2"/>
+                        <outlet property="lblSpanishWord" destination="GEF-BX-she" id="n9M-bn-0Mm"/>
                         <outlet property="lblWrongAttempts" destination="okn-sw-doo" id="XhQ-o4-POk"/>
                     </connections>
                 </viewController>

@@ -6,12 +6,16 @@
 //
 
 import Foundation
+import UIKit
 
 protocol HomeBuisnessLogic {
     func fetchWords()
     func checkTransaltion(_ vm: HomeViewModel?, isCorrect: Bool)
-    func startTimer()
+    func startTimer(isMadeAttempt: Bool) 
     func resetTimer()
+    func endGame()
+    func restartGame()
+    func quitGame()
 }
 
 protocol HomeDataStore {
@@ -60,30 +64,38 @@ class HomeInteractor: HomeDataStore {
         }
     }
     
-    func increaseWrongAttempt() {
-        self.wrongAttempts += 1
+    private func loadWordPair() {
+        self.startTimer(isMadeAttempt: false)
         let randomWord = self.getRandomWord(self.wordsForGame)
         self.presenter?.loadTranslationPair(word: randomWord, correctAttempts: self.correctAttempts, wrongAttempts: self.wrongAttempts)
     }
     
+    private func increaseWrongAttempt() {
+        self.wrongAttempts += 1
+        self.loadWordPair()
+    }
+    
+    private func startAGame() {
+        self.correctAttempts = 0
+        self.wrongAttempts = 0
+        self.loadWordPair()
+    }
     
 }
 
 extension HomeInteractor: HomeBuisnessLogic {
+    
     func fetchWords() {
         self.allWords = Bundle.main.decode(fileName.words.rawValue)
         getWordsforAGame(self.allWords)
-        let randomWord = getRandomWord(self.wordsForGame)
-        self.presenter?.loadTranslationPair(word: randomWord, correctAttempts: 0, wrongAttempts: 0)
+        self.startAGame()
     }
     
     func checkTransaltion(_ vm: HomeViewModel?, isCorrect: Bool)  {
-        self.resetTimer()
         guard !isWordListEmpty(), let vm = vm else { return }
         let filteredVM = self.allWords.filter ({
             return $0.engText == vm.homeInfoVM.engText && $0.spanishText == vm.homeInfoVM.spanishText
         })
-        let randomWord = getRandomWord(self.wordsForGame)
         if (isCorrect && !filteredVM.isEmpty) || (!isCorrect && filteredVM.isEmpty) {
             //correct Attempts when transation is correct and user chooses correct button OR When transation is wrong and user chooses Wrong button
             self.correctAttempts += 1
@@ -91,14 +103,14 @@ extension HomeInteractor: HomeBuisnessLogic {
             //Wrong Attempts when transation is correct and user chooses Wrong button OR When transation is wrong and user chooses Correct button
             self.wrongAttempts += 1
         }
-        self.presenter?.loadTranslationPair(word: randomWord, correctAttempts: self.correctAttempts, wrongAttempts: self.wrongAttempts)
+        self.loadWordPair()
     }
     
-    func startTimer() {
-        var timeLeft = 5
+    func startTimer(isMadeAttempt: Bool) {
+        var timeLeft = Constants.maxTimeForAttempt
         self.timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { timer in
             timeLeft -= 1
-            if timeLeft == 0 {
+            if timeLeft == 0, !isMadeAttempt {
                 self.increaseWrongAttempt()
                 timer.invalidate()
             }
@@ -107,7 +119,20 @@ extension HomeInteractor: HomeBuisnessLogic {
     
     func resetTimer() {
         timer.invalidate()
-        startTimer()
+        startTimer(isMadeAttempt: true)
+    }
+    
+    func endGame() {
+        resetTimer()
+        self.presenter?.onEndGame(score: self.correctAttempts)
+    }
+    
+    func restartGame() {
+        self.startAGame()
+    }
+    
+    func quitGame() {
+        self.presenter?.onQuitGame()
     }
     
 }

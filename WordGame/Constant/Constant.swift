@@ -23,4 +23,12 @@ struct Constants {
         static let mainColor: UIColor = #colorLiteral(red: 0.9294117647, green: 0.431372549, blue: 0.262745098, alpha: 1)
         static let buttonTextColor: UIColor = .white
     }
+    
+    struct Alert {
+        static let title = "alert_title".localized()
+        static let message = "alert_message".localized()
+        static let leftButtonTitle = "alert_no_title".localized()
+        static let rightButtonTitle = "alert_yes_title".localized()
+        static let points = "points".localized()
+    }
 }
