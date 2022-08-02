@@ -11,8 +11,6 @@ import UIKit
 protocol HomeBuisnessLogic {
     func fetchWords()
     func checkTransaltion(_ vm: HomeViewModel?, isCorrect: Bool)
-    func startTimer(isMadeAttempt: Bool) 
-    func resetTimer()
     func endGame()
     func restartGame()
     func quitGame()
@@ -64,21 +62,42 @@ class HomeInteractor: HomeDataStore {
         }
     }
     
+    /// This function is to load a random word and pass it to the viewcontroller from presenter
     private func loadWordPair() {
         self.startTimer(isMadeAttempt: false)
         let randomWord = self.getRandomWord(self.wordsForGame)
         self.presenter?.loadTranslationPair(word: randomWord, correctAttempts: self.correctAttempts, wrongAttempts: self.wrongAttempts)
     }
     
+    /// This function is increase wrongAttenmpt when time of 5 seconds has been passed
     private func increaseWrongAttempt() {
         self.wrongAttempts += 1
         self.loadWordPair()
     }
     
+    /// This function is to start a game and load the word pair on the screen
     private func startAGame() {
         self.correctAttempts = 0
         self.wrongAttempts = 0
         self.loadWordPair()
+    }
+    
+    /// This function is to start the timer of 5 seconds
+    /// - Parameter isMadeAttempt: bool value if user has made any attempt or not
+    private func startTimer(isMadeAttempt: Bool) {
+        var timeLeft = Constants.maxTimeForAttempt
+        self.timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { timer in
+            timeLeft -= 1
+            if timeLeft == 0, !isMadeAttempt {
+                self.increaseWrongAttempt()
+                timer.invalidate()
+            }
+        })
+    }
+    
+    private func resetTimer() {
+        timer.invalidate()
+        startTimer(isMadeAttempt: true)
     }
     
 }
@@ -86,12 +105,17 @@ class HomeInteractor: HomeDataStore {
 extension HomeInteractor: HomeBuisnessLogic {
     
     func fetchWords() {
-        self.allWords = Bundle.main.decode(fileName.words.rawValue)
+        self.allWords = Bundle.main.decode(FileName.words.rawValue)
         getWordsforAGame(self.allWords)
         self.startAGame()
     }
     
+    /// This function is to check whether the attempts which use has made is correct or not
+    /// - Parameters:
+    ///   - vm: home view model
+    ///   - isCorrect: attempt value which user have selected
     func checkTransaltion(_ vm: HomeViewModel?, isCorrect: Bool)  {
+        self.resetTimer()
         guard !isWordListEmpty(), let vm = vm else { return }
         let filteredVM = self.allWords.filter ({
             return $0.engText == vm.homeInfoVM.engText && $0.spanishText == vm.homeInfoVM.spanishText
@@ -105,23 +129,7 @@ extension HomeInteractor: HomeBuisnessLogic {
         }
         self.loadWordPair()
     }
-    
-    func startTimer(isMadeAttempt: Bool) {
-        var timeLeft = Constants.maxTimeForAttempt
-        self.timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { timer in
-            timeLeft -= 1
-            if timeLeft == 0, !isMadeAttempt {
-                self.increaseWrongAttempt()
-                timer.invalidate()
-            }
-        })
-    }
-    
-    func resetTimer() {
-        timer.invalidate()
-        startTimer(isMadeAttempt: true)
-    }
-    
+
     func endGame() {
         resetTimer()
         self.presenter?.onEndGame(score: self.correctAttempts)

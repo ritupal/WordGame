@@ -13,7 +13,7 @@ protocol HomeDisplayLogic: AnyObject {
     func closeAppOnGameQuit()
 }
 
-class HomeViewController: BaseViewController {
+class HomeViewController: UIViewController, StoryboardHelper {
     var interactor: HomeBuisnessLogic?
     var viewModel: HomeViewModel?
     
@@ -28,13 +28,13 @@ class HomeViewController: BaseViewController {
     //MARK:- View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.defaultSetup()
+//        self.defaultSetup()
         self.setupView()
         self.getLanguageWord()
     }
     
     //MARK:- Methods
-    private func defaultSetup() {
+    func defaultSetup() {
         let viewController = self
         let interactor = HomeInteractor()
         let presenter = HomePresenter()
@@ -44,10 +44,10 @@ class HomeViewController: BaseViewController {
     }
     
     private func setupView() {
+        self.lblCorrectAttempts.textColor = Constants.Styles.mainColor
+        self.lblWrongAttempts.textColor = Constants.Styles.mainColor
+        self.BtnWrong.backgroundColor = Constants.Styles.mainColor
         setDefaultText()
-        self.lblCorrectAttempts.textColor = Constants.Style.mainColor
-        self.lblWrongAttempts.textColor = Constants.Style.mainColor
-        self.BtnWrong.backgroundColor = Constants.Style.mainColor
     }
     
     private func setDefaultText() {
@@ -68,10 +68,9 @@ class HomeViewController: BaseViewController {
     
     private func getLanguageWord() {
         interactor?.fetchWords()
-//        interactor?.startTimer(isMadeAttempt: false)
     }
     
-    private func endGame(vm: HomeInfoViewModel) {
+    func endGame(vm: HomeInfoViewModel) {
         if vm.correctAttempts == Constants.maxWordPairForAGame || vm.wrongAttempts == Constants.maxWrongLimit {
             interactor?.endGame()
         }
@@ -79,12 +78,10 @@ class HomeViewController: BaseViewController {
     
     //MARK:- IBActions
     @IBAction func actionCorrectAnswer(_ sender: Any) {
-        interactor?.resetTimer()
         interactor?.checkTransaltion(self.viewModel, isCorrect: true)
     }
     
     @IBAction func actionWrongAction(_ sender: Any) {
-        interactor?.resetTimer()
         interactor?.checkTransaltion(self.viewModel, isCorrect: false)
     }
     

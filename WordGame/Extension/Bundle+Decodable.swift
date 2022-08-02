@@ -7,8 +7,9 @@
 
 import Foundation
 
-enum fileName: String {
+enum FileName: String {
     case words = "words"
+    case mockWord = "wordMock"
 }
 
 extension Bundle {

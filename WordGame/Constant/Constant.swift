@@ -19,9 +19,12 @@ struct Constants {
         static let correct = "home_correct_text".localized()
         static let wrong = "home_wrong_text".localized()
     }
-    struct Style {
+    struct Styles {
         static let mainColor: UIColor = #colorLiteral(red: 0.9294117647, green: 0.431372549, blue: 0.262745098, alpha: 1)
         static let buttonTextColor: UIColor = .white
+        static let backGroundColor: UIColor = .white
+        static let tabbarStyleColor: UIBarStyle = .black
+
     }
     
     struct Alert {
