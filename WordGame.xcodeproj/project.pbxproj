@@ -8,6 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		A037C0F72890176A00A6A1F8 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A037C0F62890176A00A6A1F8 /* HomeInteractor.swift */; };
+		A037C0F9289023B200A6A1F8 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A037C0F8289023B200A6A1F8 /* HomePresenter.swift */; };
+		A07F9FB428902D09000C3100 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A07F9FB628902D09000C3100 /* Localizable.strings */; };
+		A07F9FBA28918D53000C3100 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07F9FB928918D53000C3100 /* HomeViewModel.swift */; };
+		A0B41BED28992CE700E6CE39 /* HomeViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B41BEC28992CE700E6CE39 /* HomeViewControllerTest.swift */; };
+		A0B41BEF28992CF300E6CE39 /* HomeInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B41BEE28992CF300E6CE39 /* HomeInteractorTest.swift */; };
+		A0B41BF128992CFE00E6CE39 /* HomePresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B41BF028992CFE00E6CE39 /* HomePresenterTest.swift */; };
+		A0B41BF8289943E300E6CE39 /* StoryboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B41BF7289943E300E6CE39 /* StoryboardHelper.swift */; };
+		A0B41BFB28994D9800E6CE39 /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B41BFA28994D9800E6CE39 /* CustomNavigationController.swift */; };
+		A0B41C0028995DFF00E6CE39 /* wordMock.json in Resources */ = {isa = PBXBuildFile; fileRef = A0B41BFF28995DFF00E6CE39 /* wordMock.json */; };
+		A0B41C02289A631600E6CE39 /* HomeWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B41C01289A631600E6CE39 /* HomeWireFrame.swift */; };
 		A0DD9E0E288F05780021E9FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DD9E0D288F05780021E9FA /* AppDelegate.swift */; };
 		A0DD9E10288F05780021E9FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DD9E0F288F05780021E9FA /* SceneDelegate.swift */; };
 		A0DD9E15288F05780021E9FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0DD9E13288F05780021E9FA /* Main.storyboard */; };
@@ -17,11 +27,9 @@
 		A0DD9E30288F057A0021E9FA /* WordGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DD9E2F288F057A0021E9FA /* WordGameUITests.swift */; };
 		A0DD9E3F288F05B60021E9FA /* words.json in Resources */ = {isa = PBXBuildFile; fileRef = A0DD9E3E288F05B60021E9FA /* words.json */; };
 		A0DD9E47288F0BB00021E9FA /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DD9E46288F0BB00021E9FA /* Constant.swift */; };
-		A0DD9E4A288F0EC80021E9FA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A0DD9E4C288F0EC80021E9FA /* Localizable.strings */; };
 		A0DD9E58288F10A80021E9FA /* String+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DD9E57288F10A80021E9FA /* String+Localizable.swift */; };
 		A0DD9E5B288F11AE0021E9FA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DD9E5A288F11AE0021E9FA /* HomeViewController.swift */; };
-		A0DD9E5F288F19020021E9FA /* CustomMainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DD9E5E288F19020021E9FA /* CustomMainButton.swift */; };
-		A0DD9E61288F1CB30021E9FA /* UIButton+Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DD9E60288F1CB30021E9FA /* UIButton+Main.swift */; };
+		A0DD9E61288F1CB30021E9FA /* UIView+Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DD9E60288F1CB30021E9FA /* UIView+Main.swift */; };
 		A0DD9E64289007370021E9FA /* Bundle+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DD9E63289007370021E9FA /* Bundle+Decodable.swift */; };
 		A0DD9E6728900A520021E9FA /* WordsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DD9E6628900A520021E9FA /* WordsModel.swift */; };
 /* End PBXBuildFile section */
@@ -45,6 +53,17 @@
 
 /* Begin PBXFileReference section */
 		A037C0F62890176A00A6A1F8 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		A037C0F8289023B200A6A1F8 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		A07F9FB528902D09000C3100 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A07F9FB828902D2B000C3100 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		A07F9FB928918D53000C3100 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		A0B41BEC28992CE700E6CE39 /* HomeViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTest.swift; sourceTree = "<group>"; };
+		A0B41BEE28992CF300E6CE39 /* HomeInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractorTest.swift; sourceTree = "<group>"; };
+		A0B41BF028992CFE00E6CE39 /* HomePresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterTest.swift; sourceTree = "<group>"; };
+		A0B41BF7289943E300E6CE39 /* StoryboardHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardHelper.swift; sourceTree = "<group>"; };
+		A0B41BFA28994D9800E6CE39 /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
+		A0B41BFF28995DFF00E6CE39 /* wordMock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = wordMock.json; sourceTree = "<group>"; };
+		A0B41C01289A631600E6CE39 /* HomeWireFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWireFrame.swift; sourceTree = "<group>"; };
 		A0DD9E0A288F05780021E9FA /* WordGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0DD9E0D288F05780021E9FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0DD9E0F288F05780021E9FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,14 +79,9 @@
 		A0DD9E31288F057A0021E9FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A0DD9E3E288F05B60021E9FA /* words.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = words.json; sourceTree = "<group>"; };
 		A0DD9E46288F0BB00021E9FA /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
-		A0DD9E4B288F0EC80021E9FA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		A0DD9E54288F0F9D0021E9FA /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
-		A0DD9E55288F0F9D0021E9FA /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		A0DD9E56288F0F9D0021E9FA /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A0DD9E57288F10A80021E9FA /* String+Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localizable.swift"; sourceTree = "<group>"; };
 		A0DD9E5A288F11AE0021E9FA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		A0DD9E5E288F19020021E9FA /* CustomMainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMainButton.swift; sourceTree = "<group>"; };
-		A0DD9E60288F1CB30021E9FA /* UIButton+Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Main.swift"; sourceTree = "<group>"; };
+		A0DD9E60288F1CB30021E9FA /* UIView+Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Main.swift"; sourceTree = "<group>"; };
 		A0DD9E63289007370021E9FA /* Bundle+Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Decodable.swift"; sourceTree = "<group>"; };
 		A0DD9E6628900A520021E9FA /* WordsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,6 +111,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A0B41BEB28992CD100E6CE39 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A0B41BEC28992CE700E6CE39 /* HomeViewControllerTest.swift */,
+				A0B41BEE28992CF300E6CE39 /* HomeInteractorTest.swift */,
+				A0B41BF028992CFE00E6CE39 /* HomePresenterTest.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		A0B41BF928994D8900E6CE39 /* NavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				A0B41BFA28994D9800E6CE39 /* CustomNavigationController.swift */,
+			);
+			path = NavigationController;
+			sourceTree = "<group>";
+		};
 		A0DD9E01288F05770021E9FA = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +169,7 @@
 		A0DD9E23288F057A0021E9FA /* WordGameTests */ = {
 			isa = PBXGroup;
 			children = (
+				A0B41BEB28992CD100E6CE39 /* Home */,
 				A0DD9E24288F057A0021E9FA /* WordGameTests.swift */,
 				A0DD9E26288F057A0021E9FA /* Info.plist */,
 			);
@@ -155,9 +188,10 @@
 		A0DD9E3D288F059B0021E9FA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A0B41BFF28995DFF00E6CE39 /* wordMock.json */,
 				A0DD9E16288F057A0021E9FA /* Assets.xcassets */,
 				A0DD9E3E288F05B60021E9FA /* words.json */,
-				A0DD9E4C288F0EC80021E9FA /* Localizable.strings */,
+				A07F9FB628902D09000C3100 /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -175,8 +209,9 @@
 			isa = PBXGroup;
 			children = (
 				A0DD9E57288F10A80021E9FA /* String+Localizable.swift */,
-				A0DD9E60288F1CB30021E9FA /* UIButton+Main.swift */,
+				A0DD9E60288F1CB30021E9FA /* UIView+Main.swift */,
 				A0DD9E63289007370021E9FA /* Bundle+Decodable.swift */,
+				A0B41BF7289943E300E6CE39 /* StoryboardHelper.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -202,6 +237,9 @@
 			children = (
 				A0DD9E5A288F11AE0021E9FA /* HomeViewController.swift */,
 				A037C0F62890176A00A6A1F8 /* HomeInteractor.swift */,
+				A037C0F8289023B200A6A1F8 /* HomePresenter.swift */,
+				A07F9FB928918D53000C3100 /* HomeViewModel.swift */,
+				A0B41C01289A631600E6CE39 /* HomeWireFrame.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -217,7 +255,7 @@
 		A0DD9E5D288F18DF0021E9FA /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				A0DD9E5E288F19020021E9FA /* CustomMainButton.swift */,
+				A0B41BF928994D8900E6CE39 /* NavigationController */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -342,9 +380,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0DD9E4A288F0EC80021E9FA /* Localizable.strings in Resources */,
+				A07F9FB428902D09000C3100 /* Localizable.strings in Resources */,
 				A0DD9E1A288F057A0021E9FA /* LaunchScreen.storyboard in Resources */,
 				A0DD9E3F288F05B60021E9FA /* words.json in Resources */,
+				A0B41C0028995DFF00E6CE39 /* wordMock.json in Resources */,
 				A0DD9E17288F057A0021E9FA /* Assets.xcassets in Resources */,
 				A0DD9E15288F05780021E9FA /* Main.storyboard in Resources */,
 			);
@@ -376,11 +415,15 @@
 				A0DD9E64289007370021E9FA /* Bundle+Decodable.swift in Sources */,
 				A037C0F72890176A00A6A1F8 /* HomeInteractor.swift in Sources */,
 				A0DD9E0E288F05780021E9FA /* AppDelegate.swift in Sources */,
+				A0B41BFB28994D9800E6CE39 /* CustomNavigationController.swift in Sources */,
 				A0DD9E10288F05780021E9FA /* SceneDelegate.swift in Sources */,
 				A0DD9E47288F0BB00021E9FA /* Constant.swift in Sources */,
-				A0DD9E61288F1CB30021E9FA /* UIButton+Main.swift in Sources */,
+				A07F9FBA28918D53000C3100 /* HomeViewModel.swift in Sources */,
+				A0DD9E61288F1CB30021E9FA /* UIView+Main.swift in Sources */,
 				A0DD9E58288F10A80021E9FA /* String+Localizable.swift in Sources */,
-				A0DD9E5F288F19020021E9FA /* CustomMainButton.swift in Sources */,
+				A0B41C02289A631600E6CE39 /* HomeWireFrame.swift in Sources */,
+				A0B41BF8289943E300E6CE39 /* StoryboardHelper.swift in Sources */,
+				A037C0F9289023B200A6A1F8 /* HomePresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,7 +431,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0B41BEF28992CF300E6CE39 /* HomeInteractorTest.swift in Sources */,
 				A0DD9E25288F057A0021E9FA /* WordGameTests.swift in Sources */,
+				A0B41BED28992CE700E6CE39 /* HomeViewControllerTest.swift in Sources */,
+				A0B41BF128992CFE00E6CE39 /* HomePresenterTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,11 +462,19 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		A07F9FB628902D09000C3100 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A07F9FB528902D09000C3100 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		A0DD9E13288F05780021E9FA /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				A0DD9E14288F05780021E9FA /* Base */,
-				A0DD9E54288F0F9D0021E9FA /* de */,
+				A07F9FB828902D2B000C3100 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -429,18 +483,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				A0DD9E19288F057A0021E9FA /* Base */,
-				A0DD9E55288F0F9D0021E9FA /* de */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		A0DD9E4C288F0EC80021E9FA /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A0DD9E4B288F0EC80021E9FA /* en */,
-				A0DD9E56288F0F9D0021E9FA /* de */,
-			);
-			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

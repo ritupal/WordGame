@@ -9,9 +9,10 @@ import Foundation
 
 struct WordsModel: Codable {
     let engText: String
-    let spanishText: String
+    var spanishText: String
     
-    private enum codingKeys: String, CodingKey {
-        case engText = "text_eng", spanishText = "text_spa"
+    private enum CodingKeys: String, CodingKey {
+        case engText = "text_eng"
+        case spanishText = "text_spa"
     }
 }

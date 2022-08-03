@@ -2,12 +2,19 @@
   Localizable.strings
   WordGame
 
-  Created by Kumari Ritu Pal on 25/07/22.
+  Created by Kumari Ritu Pal on 26/07/22.
   
 */
 
-//MARK: Home Screen Strings
-"home_correct_attemps" = "Correct attempts";
-"home_wrong_attemps" = "Wrong attempts";
+// Home Screen
+"home_correct_attemps" = "Correct attempts: ";
+"home_wrong_attemps" = "Wrong attempts: ";
 "home_correct_text" = "Correct";
 "home_wrong_text" = "Wrong";
+
+//Alert View
+"alert_title" = "Game Over";
+"alert_message" = "You have scored";
+"points" = "points";
+"alert_no_title" = "Quit";
+"alert_yes_title" = "Restart";
