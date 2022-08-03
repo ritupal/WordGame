@@ -7,12 +7,6 @@
 
 import UIKit
 
-protocol HomeDisplayLogic: AnyObject {
-    func loadLanguageWord(_ viewModel: HomeViewModel)
-    func endGameWithScore(_ score: Int)
-    func closeAppOnGameQuit()
-}
-
 class HomeViewController: UIViewController, StoryboardHelper {
     var interactor: HomeBuisnessLogic?
     var viewModel: HomeViewModel?
@@ -86,7 +80,7 @@ class HomeViewController: UIViewController, StoryboardHelper {
     }
     
     func animateSpanishText() {
-        UIView.animate(withDuration: 5.0, delay: 0.0, options: []) {
+        UIView.animate(withDuration: Constants.maxTimeForAttempt, delay: 0.0, options: []) {
             self.lblSpanishWord.frame.origin.y += self.view.frame.height/2
         } completion: { _ in
             self.lblSpanishWord.frame.origin.y += 0

@@ -8,20 +8,6 @@
 import Foundation
 import UIKit
 
-protocol HomeBuisnessLogic {
-    func fetchWords()
-    func checkTransaltion(_ vm: HomeViewModel?, isCorrect: Bool)
-    func endGame()
-    func restartGame()
-    func quitGame()
-}
-
-protocol HomeDataStore {
-    var allWords: [WordsModel] { get }
-    var wordsForGame: [WordsModel] { get }
-    
-}
-
 class HomeInteractor: HomeDataStore {
     var presenter: HomePresentationLogic?
     var allWords: [WordsModel] = []

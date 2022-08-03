@@ -7,12 +7,6 @@
 
 import Foundation
 
-protocol HomePresentationLogic {
-    func loadTranslationPair(word: WordsModel, correctAttempts: Int, wrongAttempts: Int)
-    func onEndGame(score: Int)
-    func onQuitGame()
-}
-
 class HomePresenter {
     weak var viewController: HomeDisplayLogic?
 }

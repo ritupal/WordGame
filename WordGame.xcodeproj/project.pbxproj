@@ -14,10 +14,10 @@
 		A0B41BED28992CE700E6CE39 /* HomeViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B41BEC28992CE700E6CE39 /* HomeViewControllerTest.swift */; };
 		A0B41BEF28992CF300E6CE39 /* HomeInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B41BEE28992CF300E6CE39 /* HomeInteractorTest.swift */; };
 		A0B41BF128992CFE00E6CE39 /* HomePresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B41BF028992CFE00E6CE39 /* HomePresenterTest.swift */; };
-		A0B41BF42899361B00E6CE39 /* HomeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B41BF32899361B00E6CE39 /* HomeBuilder.swift */; };
 		A0B41BF8289943E300E6CE39 /* StoryboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B41BF7289943E300E6CE39 /* StoryboardHelper.swift */; };
 		A0B41BFB28994D9800E6CE39 /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B41BFA28994D9800E6CE39 /* CustomNavigationController.swift */; };
 		A0B41C0028995DFF00E6CE39 /* wordMock.json in Resources */ = {isa = PBXBuildFile; fileRef = A0B41BFF28995DFF00E6CE39 /* wordMock.json */; };
+		A0B41C02289A631600E6CE39 /* HomeWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B41C01289A631600E6CE39 /* HomeWireFrame.swift */; };
 		A0DD9E0E288F05780021E9FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DD9E0D288F05780021E9FA /* AppDelegate.swift */; };
 		A0DD9E10288F05780021E9FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DD9E0F288F05780021E9FA /* SceneDelegate.swift */; };
 		A0DD9E15288F05780021E9FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0DD9E13288F05780021E9FA /* Main.storyboard */; };
@@ -60,10 +60,10 @@
 		A0B41BEC28992CE700E6CE39 /* HomeViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTest.swift; sourceTree = "<group>"; };
 		A0B41BEE28992CF300E6CE39 /* HomeInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractorTest.swift; sourceTree = "<group>"; };
 		A0B41BF028992CFE00E6CE39 /* HomePresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterTest.swift; sourceTree = "<group>"; };
-		A0B41BF32899361B00E6CE39 /* HomeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBuilder.swift; sourceTree = "<group>"; };
 		A0B41BF7289943E300E6CE39 /* StoryboardHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardHelper.swift; sourceTree = "<group>"; };
 		A0B41BFA28994D9800E6CE39 /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
 		A0B41BFF28995DFF00E6CE39 /* wordMock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = wordMock.json; sourceTree = "<group>"; };
+		A0B41C01289A631600E6CE39 /* HomeWireFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWireFrame.swift; sourceTree = "<group>"; };
 		A0DD9E0A288F05780021E9FA /* WordGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0DD9E0D288F05780021E9FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0DD9E0F288F05780021E9FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -119,14 +119,6 @@
 				A0B41BF028992CFE00E6CE39 /* HomePresenterTest.swift */,
 			);
 			path = Home;
-			sourceTree = "<group>";
-		};
-		A0B41BF22899361000E6CE39 /* Builder */ = {
-			isa = PBXGroup;
-			children = (
-				A0B41BF32899361B00E6CE39 /* HomeBuilder.swift */,
-			);
-			path = Builder;
 			sourceTree = "<group>";
 		};
 		A0B41BF928994D8900E6CE39 /* NavigationController */ = {
@@ -243,11 +235,11 @@
 		A0DD9E59288F119B0021E9FA /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				A0B41BF22899361000E6CE39 /* Builder */,
 				A0DD9E5A288F11AE0021E9FA /* HomeViewController.swift */,
 				A037C0F62890176A00A6A1F8 /* HomeInteractor.swift */,
 				A037C0F8289023B200A6A1F8 /* HomePresenter.swift */,
 				A07F9FB928918D53000C3100 /* HomeViewModel.swift */,
+				A0B41C01289A631600E6CE39 /* HomeWireFrame.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -419,7 +411,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0DD9E5B288F11AE0021E9FA /* HomeViewController.swift in Sources */,
-				A0B41BF42899361B00E6CE39 /* HomeBuilder.swift in Sources */,
 				A0DD9E6728900A520021E9FA /* WordsModel.swift in Sources */,
 				A0DD9E64289007370021E9FA /* Bundle+Decodable.swift in Sources */,
 				A037C0F72890176A00A6A1F8 /* HomeInteractor.swift in Sources */,
@@ -430,6 +421,7 @@
 				A07F9FBA28918D53000C3100 /* HomeViewModel.swift in Sources */,
 				A0DD9E61288F1CB30021E9FA /* UIView+Main.swift in Sources */,
 				A0DD9E58288F10A80021E9FA /* String+Localizable.swift in Sources */,
+				A0B41C02289A631600E6CE39 /* HomeWireFrame.swift in Sources */,
 				A0B41BF8289943E300E6CE39 /* StoryboardHelper.swift in Sources */,
 				A037C0F9289023B200A6A1F8 /* HomePresenter.swift in Sources */,
 			);
