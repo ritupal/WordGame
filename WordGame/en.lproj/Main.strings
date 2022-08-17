@@ -1,0 +1,18 @@
+
+/* Class = "UILabel"; text = "Correct attempts: 0"; ObjectID = "GEF-BX-she"; */
+"GEF-BX-she.text" = "Correct attempts: 0";
+
+/* Class = "UILabel"; text = "Correct attempts: 0"; ObjectID = "W0t-Mm-Oua"; */
+"W0t-Mm-Oua.text" = "Correct attempts: 0";
+
+/* Class = "UIButton"; normalTitle = "Correct"; ObjectID = "eeN-0G-BN1"; */
+"eeN-0G-BN1.normalTitle" = "Correct";
+
+/* Class = "UILabel"; text = "Correct attempts: 0"; ObjectID = "fGn-Um-QRc"; */
+"fGn-Um-QRc.text" = "Correct attempts: 0";
+
+/* Class = "UIButton"; normalTitle = "Wrong"; ObjectID = "fnB-4b-Ece"; */
+"fnB-4b-Ece.normalTitle" = "Wrong";
+
+/* Class = "UILabel"; text = "Wrong attempts: 0"; ObjectID = "okn-sw-doo"; */
+"okn-sw-doo.text" = "Wrong attempts: 0";
